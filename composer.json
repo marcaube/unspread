@@ -1,0 +1,24 @@
+{
+    "name": "ob/excel-merge",
+    "type": "library",
+    "description": "Console commands to merge excel and csv files",
+    "keywords": ["excel", "csv", "merge", "purge"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marc Aubé",
+            "homepage": "http://marcaube.ca"
+        }
+    ],
+    "require": {
+        "php": ">=5.3",
+        "symfony/console": "2.4.*@dev",
+        "jwage/easy-csv": "dev-master",
+        "phpoffice/phpexcel": "1.7.9"
+    },
+    "autoload" : {
+        "psr-0" : {
+            "Ob" : "src"
+        }
+    }
+}
