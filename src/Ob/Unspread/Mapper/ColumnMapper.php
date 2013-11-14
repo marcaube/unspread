@@ -59,10 +59,13 @@ class ColumnMapper implements MapperInterface
     {
         $keys = array_keys($array);
 
-        array_walk($keys, function(&$value, $key) {
-            $value = $this->map($value);
-        });
+        array_walk($keys, array($this, 'mapArrayKeysCallback'));
 
         return array_combine($keys, array_values($array));
+    }
+
+    private function mapArrayKeysCallback(&$value)
+    {
+        $value = $this->map($value);
     }
 }
