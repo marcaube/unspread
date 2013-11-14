@@ -6,6 +6,10 @@ are a bit hard to use.
 
 This library **is not** ready for use!
 
+[![Build Status](https://travis-ci.org/marcaube/unspread.png?branch=master)](https://travis-ci.org/marcaube/unspread)
+[![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/marcaube/unspread/badges/quality-score.png?s=efe154148742460ad2345bcc8c1b3058e74054a3)](https://scrutinizer-ci.com/g/marcaube/unspread/)
+[![Code Coverage](https://scrutinizer-ci.com/g/marcaube/unspread/badges/coverage.png?s=52b6467fbc70798f0996ad0b39fc5fcc67870422)](https://scrutinizer-ci.com/g/marcaube/unspread/)
+
 
 ## Requirements
 
