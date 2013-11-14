@@ -23,4 +23,68 @@ class ColumnMapperTest extends \PHPUnit_Framework_TestCase
 
         $this->assertEquals('column', $mapper->map('column'));
     }
+
+    public function testMapping()
+    {
+        $file1 = array(
+            'col1' => 1,
+            'col2' => 1,
+            'col3' => 1
+        );
+
+        $file2 = array(
+            'column1' => 1,
+            'column2' => 1,
+            'column3' => 1
+        );
+
+        $mapping = array(
+            'column1' => 'col1',
+            'column2' => 'col2',
+            'column3' => 'col3'
+        );
+
+        $mapper = new ColumnMapper($mapping);
+
+        $this->assertEquals($file1, $mapper->mapColumns($file2, $mapping));
+    }
+
+    public function testMappingMulti()
+    {
+        $file1 = array(
+            array(
+                'col1' => 1,
+                'col2' => 1,
+                'col3' => 1
+            ),
+            array(
+                'col1' => 2,
+                'col2' => 2,
+                'col3' => 2
+            )
+        );
+
+        $file2 = array(
+            array(
+                'column1' => 1,
+                'column2' => 1,
+                'column3' => 1
+            ),
+            array(
+                'column1' => 2,
+                'column2' => 2,
+                'column3' => 2
+            )
+        );
+
+        $mapping = array(
+            'column1' => 'col1',
+            'column2' => 'col2',
+            'column3' => 'col3'
+        );
+
+        $mapper = new ColumnMapper($mapping);
+
+        $this->assertEquals($file1, $mapper->mapColumns($file2, $mapping));
+    }
 }
