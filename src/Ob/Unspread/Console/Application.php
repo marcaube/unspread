@@ -3,9 +3,6 @@
 namespace Ob\Unspread\Console;
 
 use Symfony\Component\Console\Application as BaseApplication;
-use Symfony\Component\Console\Input\InputDefinition;
-use Symfony\Component\Console\Input\InputArgument;
-use Symfony\Component\Console\Input\InputOption;
 
 class Application extends BaseApplication
 {

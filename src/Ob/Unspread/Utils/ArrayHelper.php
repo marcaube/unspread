@@ -5,6 +5,8 @@ namespace Ob\Unspread\Utils;
 class ArrayHelper
 {
     /**
+     * Checks if the given array is associative
+     *
      * @param array $array
      *
      * @return bool
@@ -21,6 +23,8 @@ class ArrayHelper
     }
 
     /**
+     * Checks if the given array is multi-dimensionnal
+     *
      * @param array $array
      *
      * @return bool

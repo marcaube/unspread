@@ -9,11 +9,17 @@ class XlsReader implements ReaderInterface
 {
     private $reader;
 
+    /**
+     * @param string $filePath
+     */
     public function __construct($filePath)
     {
         $this->reader = \PHPExcel_IOFactory::load($filePath);
     }
 
+    /**
+     * @return array
+     */
     public function getHeaders()
     {
         return $this->getLine(1);
@@ -24,6 +30,11 @@ class XlsReader implements ReaderInterface
 
     }
 
+    /**
+     * @param int $lineNumber
+     *
+     * @return array
+     */
     public function getRow($lineNumber)
     {
         // PHPExcel rows start at index 2
@@ -43,6 +54,11 @@ class XlsReader implements ReaderInterface
         return $result;
     }
 
+    /**
+     * @param int $lineNumber
+     *
+     * @return array
+     */
     private function getLine($lineNumber)
     {
         $result = array();
@@ -59,6 +75,12 @@ class XlsReader implements ReaderInterface
         return $result;
     }
 
+    /**
+     * @param string $columnName
+     * @param int $lineNumber
+     *
+     * @return mixed
+     */
     public function getCell($columnName, $lineNumber)
     {
         if (!array_search($columnName, $this->getHeaders())) {

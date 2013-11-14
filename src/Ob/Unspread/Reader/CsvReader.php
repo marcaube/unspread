@@ -11,6 +11,9 @@ class CsvReader implements ReaderInterface
     private $reader;
     private $data;
 
+    /**
+     * @param string $filePath
+     */
     public function __construct($filePath)
     {
         $this->reader = new Reader($filePath);
@@ -19,16 +22,27 @@ class CsvReader implements ReaderInterface
         $this->data = $this->reader->getAll();
     }
 
+    /**
+     * @return array
+     */
     public function getHeaders()
     {
         return $this->reader->getHeaders();
     }
 
+    /**
+     * @return array
+     */
     public function getContent()
     {
         return $this->data;
     }
 
+    /**
+     * @param int $lineNumber
+     *
+     * @return array
+     */
     public function getRow($lineNumber)
     {
         // EasyCSV rows start at index 0
@@ -41,6 +55,12 @@ class CsvReader implements ReaderInterface
         return $this->data[$lineNumber];
     }
 
+    /**
+     * @param string $columnName
+     * @param int $lineNumber
+     *
+     * @return string
+     */
     public function getCell($columnName, $lineNumber)
     {
         if (!array_search($columnName, $this->getHeaders())) {
