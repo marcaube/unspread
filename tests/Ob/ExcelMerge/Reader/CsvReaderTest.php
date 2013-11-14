@@ -4,10 +4,55 @@ use Ob\ExcelMerge\Reader\CsvReader;
 
 class CsvReaderTest extends \PHPUnit_Framework_TestCase
 {
-    public function testHeaders()
-    {
-        $reader = new CsvReader(__DIR__ . '/../file1.csv');
+    private $reader;
 
-        $this->assertEquals(array("column1", "column2", "column3"), $reader->getHeaders());
+    public function setUp()
+    {
+        $this->reader = new CsvReader(__DIR__ . '/../file1.csv');
+    }
+
+    public function testGetHeaders()
+    {
+        $result = array('column1', 'column2', 'column3');
+
+        $this->assertEquals($result, $this->reader->getHeaders());
+    }
+
+    public function testGetRow()
+    {
+        $row1 = array(
+            'column1' => 'col1cell1',
+            'column2' => 'col2cell1',
+            'column3' => 'col3cell1'
+        );
+
+        $row2 = array(
+            'column1' => 'col1cell2',
+            'column2' => 'col2cell2',
+            'column3' => 'col3cell2'
+        );
+
+        $this->assertEquals($row1, $this->reader->getRow(1));
+        $this->assertEquals($row2, $this->reader->getRow(2));
+    }
+
+    public function testInvalidRow()
+    {
+        $this->setExpectedException('Ob\ExcelMerge\Exception\OutOfBoundsException');
+
+        $this->reader->getRow(9000);
+    }
+
+    public function testGetCell()
+    {
+        $this->assertEquals('col2cell1', $this->reader->getCell('column2', 1));
+        $this->assertEquals('col3cell3', $this->reader->getCell('column3', 3));
+    }
+
+    public function testInvalidCell()
+    {
+        $this->setExpectedException('Ob\ExcelMerge\Exception\OutOfBoundsException');
+
+        $this->reader->getCell('column1', 9000);
     }
 }
