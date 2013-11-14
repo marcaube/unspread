@@ -7,10 +7,7 @@ use Ob\Unspread\Exception\OutOfBoundsException;
 
 class XlsReader implements ReaderInterface
 {
-    const FILE_TYPE = 'Excel5';
-
     private $reader;
-    private $data;
 
     public function __construct($filePath)
     {
@@ -62,14 +59,14 @@ class XlsReader implements ReaderInterface
         return $result;
     }
 
-    public function getCell($column, $lineNumber)
+    public function getCell($columnName, $lineNumber)
     {
-        if (!array_search($column, $this->getHeaders())) {
-            throw new OutOfBoundsException(sprintf('There is no column %s.', $column));
+        if (!array_search($columnName, $this->getHeaders())) {
+            throw new OutOfBoundsException(sprintf('There is no column %s.', $columnName));
         }
 
         $row = $this->getRow($lineNumber);
 
-        return $row[$column];
+        return $row[$columnName];
     }
 }

@@ -12,5 +12,5 @@ interface ReaderInterface
 
     public function getRow($lineNumber);
 
-    public function getCell($column, $lineNumber);
+    public function getCell($columnName, $lineNumber);
 }

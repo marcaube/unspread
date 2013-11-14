@@ -3,3 +3,4 @@ composer.lock
 composer.phar
 php-cs-fixer.phar
 vendor
+tests/Ob/Unspread/write.csv

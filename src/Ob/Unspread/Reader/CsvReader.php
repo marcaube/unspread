@@ -41,14 +41,14 @@ class CsvReader implements ReaderInterface
         return $this->data[$lineNumber];
     }
 
-    public function getCell($column, $lineNumber)
+    public function getCell($columnName, $lineNumber)
     {
-        if (!array_search($column, $this->getHeaders())) {
-            throw new OutOfBoundsException(sprintf('There is no column %s.', $column));
+        if (!array_search($columnName, $this->getHeaders())) {
+            throw new OutOfBoundsException(sprintf('There is no column %s.', $columnName));
         }
 
         $row = $this->getRow($lineNumber);
 
-        return $row[$column];
+        return $row[$columnName];
     }
 }
