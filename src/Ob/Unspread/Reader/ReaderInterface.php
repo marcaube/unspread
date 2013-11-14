@@ -10,7 +10,7 @@ interface ReaderInterface
 
     public function getContent();
 
-    public function getRow($line);
+    public function getRow($lineNumber);
 
-    public function getCell($column, $line);
+    public function getCell($column, $lineNumber);
 }
