@@ -11,9 +11,9 @@ class CsvReader implements ReaderInterface
     private $reader;
     private $data;
 
-    public function __construct($path)
+    public function __construct($filePath)
     {
-        $this->reader = new Reader($path);
+        $this->reader = new Reader($filePath);
 
         // "Cache" content to avoid weird iterator behavior in EasyCSV
         $this->data = $this->reader->getAll();

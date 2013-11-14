@@ -12,9 +12,9 @@ class XlsReader implements ReaderInterface
     private $reader;
     private $data;
 
-    public function __construct($path)
+    public function __construct($filePath)
     {
-        $this->reader = \PHPExcel_IOFactory::load($path);
+        $this->reader = \PHPExcel_IOFactory::load($filePath);
     }
 
     public function getHeaders()

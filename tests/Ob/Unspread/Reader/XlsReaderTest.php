@@ -8,6 +8,6 @@ class XlsReaderTest extends AbstractTest
 
     public function setUp()
     {
-        $this->reader = new XlsReader(__DIR__ . '/../file1.xls');
+        $this->reader = new XlsReader(__DIR__ . '/../read.xls');
     }
 }

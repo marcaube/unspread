@@ -8,6 +8,6 @@ class CsvReaderTest extends AbstractTest
 
     public function setUp()
     {
-        $this->reader = new CsvReader(__DIR__ . '/../file1.csv');
+        $this->reader = new CsvReader(__DIR__ . '/../read.csv');
     }
 }
