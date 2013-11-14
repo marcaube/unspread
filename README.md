@@ -1,31 +1,10 @@
 # Unspread
 
-**Unspread** is a happy bunch of console commands to merge excel and csv files together in different ways.
+**Unspread** will be a happy bunch of console commands to merge excel and csv files together in different ways.
+It will also provide a nice API over [PHPExcel](https://github.com/PHPOffice/PHPExcel) and other libraries that 
+are a bit hard to use.
 
-
-## Usage
-
-TBD
-
-
-## Installation
-
-Add unspread to your `composer.json` file:
-
-```json
-{
-    "require": {
-        "ob/unspread": "*"
-    }
-}
-```
-
-Get composer and install:
-
-```bash
-$ curl -sS https://getcomposer.org/installer | php
-$ composer install
-```
+This library **is not** ready for use!
 
 
 ## Requirements
@@ -62,4 +41,4 @@ $ phpunit --coverage-text -c tests/
 
 ## License
 
-excel-merge is released under the MIT License. See the bundled [LICENSE](LICENSE) file for details.
+Unspread is released under the MIT License. See the bundled [LICENSE](LICENSE) file for details.
