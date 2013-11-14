@@ -1,5 +1,5 @@
 {
-    "name": "ob/excel-merge",
+    "name": "ob/unspread",
     "description": "Console commands to merge excel and csv files",
     "keywords": ["excel", "csv", "merge", "purge"],
     "type": "library",
@@ -20,9 +20,9 @@
 
     "autoload" : {
         "psr-0" : {
-            "Ob\\ExcelMerge" : "src"
+            "Ob\\Unspread" : "src"
         }
     },
 
-    "bin": ["bin/excel-merge"]
+    "bin": ["bin/unspread"]
 }

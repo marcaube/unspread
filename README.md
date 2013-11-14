@@ -1,6 +1,6 @@
-# Excel Merge
+# Unspread
 
-**Excel Merge** is a happy bunch of console commands to merge excel and csv files together in different ways.
+**Unspread** is a happy bunch of console commands to merge excel and csv files together in different ways.
 
 
 ## Usage
@@ -10,12 +10,12 @@ TBD
 
 ## Installation
 
-Add the excel-merge to your `composer.json` file:
+Add unspread to your `composer.json` file:
 
 ```json
 {
     "require": {
-        "ob/excel-merge": "*"
+        "ob/unspread": "*"
     }
 }
 ```

@@ -1,6 +1,6 @@
 <?php
 
-use Ob\ExcelMerge\Mapper\ColumnMapper;
+use Ob\Unspread\Mapper\ColumnMapper;
 
 class ColumnMapperTest extends \PHPUnit_Framework_TestCase
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Ob\ExcelMerge\Reader;
+namespace Ob\Unspread\Reader;
 
-use Ob\ExcelMerge\Exception\OutOfBoundsException;
-use Ob\ExcelMerge\Reader\ReaderInterface;
+use Ob\Unspread\Exception\OutOfBoundsException;
+use Ob\Unspread\Reader\ReaderInterface;
 use EasyCSV\Reader;
 
 class CsvReader implements ReaderInterface

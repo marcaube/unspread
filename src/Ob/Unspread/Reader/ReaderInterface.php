@@ -1,6 +1,6 @@
 <?php
 
-namespace Ob\ExcelMerge\Reader;
+namespace Ob\Unspread\Reader;
 
 interface ReaderInterface
 {

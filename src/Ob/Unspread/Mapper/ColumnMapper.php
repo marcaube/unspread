@@ -1,8 +1,8 @@
 <?php
 
-namespace Ob\ExcelMerge\Mapper;
+namespace Ob\Unspread\Mapper;
 
-use Ob\ExcelMerge\Mapper\MapperInterface;
+use Ob\Unspread\Mapper\MapperInterface;
 
 class ColumnMapper implements MapperInterface
 {

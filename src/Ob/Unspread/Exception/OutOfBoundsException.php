@@ -1,8 +1,8 @@
 <?php
 
-namespace Ob\ExcelMerge\Exception;
+namespace Ob\Unspread\Exception;
 
-use Ob\ExcelMerge\Exception\ExceptionInterface;
+use Ob\Unspread\Exception\ExceptionInterface;
 
 class OutOfBoundsException extends \OutOfBoundsException implements ExceptionInterface
 {

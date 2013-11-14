@@ -16,6 +16,6 @@ if ((!$loader = includeIfExists(__DIR__.'/../vendor/autoload.php')) && (!$loader
     );
 }
 
-$app = new Ob\ExcelMerge\Console\Application();
+$app = new Ob\Unspread\Console\Application();
 
 $app->run();

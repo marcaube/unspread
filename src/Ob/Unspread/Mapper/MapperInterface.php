@@ -1,6 +1,6 @@
 <?php
 
-namespace Ob\ExcelMerge\Mapper;
+namespace Ob\Unspread\Mapper;
 
 interface MapperInterface
 {

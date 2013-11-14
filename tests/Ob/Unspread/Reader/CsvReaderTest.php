@@ -1,6 +1,6 @@
 <?php
 
-use Ob\ExcelMerge\Reader\CsvReader;
+use Ob\Unspread\Reader\CsvReader;
 
 class CsvReaderTest extends \PHPUnit_Framework_TestCase
 {
@@ -38,7 +38,7 @@ class CsvReaderTest extends \PHPUnit_Framework_TestCase
 
     public function testInvalidRow()
     {
-        $this->setExpectedException('Ob\ExcelMerge\Exception\OutOfBoundsException');
+        $this->setExpectedException('Ob\Unspread\Exception\OutOfBoundsException');
 
         $this->reader->getRow(9000);
     }
@@ -51,7 +51,7 @@ class CsvReaderTest extends \PHPUnit_Framework_TestCase
 
     public function testInvalidCell()
     {
-        $this->setExpectedException('Ob\ExcelMerge\Exception\OutOfBoundsException');
+        $this->setExpectedException('Ob\Unspread\Exception\OutOfBoundsException');
 
         $this->reader->getCell('column1', 9000);
     }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Ob\ExcelMerge\Exception;
+namespace Ob\Unspread\Exception;
 
 interface ExceptionInterface
 {
