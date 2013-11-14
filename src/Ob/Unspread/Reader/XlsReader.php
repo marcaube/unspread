@@ -77,7 +77,7 @@ class XlsReader implements ReaderInterface
 
     /**
      * @param string $columnName
-     * @param int $lineNumber
+     * @param int    $lineNumber
      *
      * @return mixed
      */

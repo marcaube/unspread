@@ -40,8 +40,7 @@ class Spreadsheet
     {
         $this->columns = array_splice($this->columns, $position, 0, $columnName);
 
-        foreach($this->rows as $key => $value)
-        {
+        foreach ($this->rows as $key => $value) {
             $this->rows[$key] = array_splice($value, $position, 0, $defaultValue);
         }
     }

@@ -5,7 +5,7 @@ namespace Ob\Unspread\Mapper;
 interface MapperInterface
 {
     /**
-     * @param string $string
+     * @param string $input
      */
     public function map($input);
 }

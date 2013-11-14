@@ -3,15 +3,16 @@
 namespace Ob\Unspread\Merger;
 
 use Ob\Unspread\Merger\MergerInterface;
-use Ob\Unspread\Reader\CsvReader;
 use Ob\Unspread\Mapper\ColumnMapper;
 
 class CsvMerger implements MergerInterface
 {
     /**
-     * @param array  $baseFile
-     * @param array  $additionalFile
-     * @param array  $columnMapping
+     * @param array $baseFile
+     * @param array $additionalFile
+     * @param array $columnMapping
+     *
+     * @return array
      */
     public function merge($baseFile, $additionalFile, $columnMapping = array())
     {

@@ -19,7 +19,7 @@ class CsvWriter implements WriterInterface
 
     /**
      * @param array $row
-     * @param null $lineNumber
+     * @param null  $lineNumber
      */
     public function writeRow($row, $lineNumber = null)
     {
@@ -27,9 +27,9 @@ class CsvWriter implements WriterInterface
     }
 
     /**
-     * @param int $cell
+     * @param int    $cell
      * @param string $column
-     * @param int $lineNumber
+     * @param int    $lineNumber
      */
     public function writeCell($cell, $column, $lineNumber)
     {

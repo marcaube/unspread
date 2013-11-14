@@ -10,7 +10,7 @@ class ColumnMapper implements MapperInterface
     private $columnMapping;
 
     /**
-     * @param array $mapping
+     * @param array $columnMapping
      */
     public function __construct($columnMapping)
     {
@@ -34,6 +34,8 @@ class ColumnMapper implements MapperInterface
 
     /**
      * @param array $file
+     *
+     * @return array
      */
     public function mapColumns($file)
     {
