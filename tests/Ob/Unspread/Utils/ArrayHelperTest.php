@@ -25,4 +25,18 @@ class ArrayHelperTest extends \PHPUnit_Framework_TestCase
 
         $this->assertFalse($this->helper->isAssoc($array));
     }
+
+    public function testRenameKeys()
+    {
+        $array = array('1', '2', '3');
+        $newKeys = array('A', 'B', 'C');
+
+        $expectedResult = array(
+            'A' => '1',
+            'B' => '2',
+            'C' => '3'
+        );
+
+        $this->assertEquals($expectedResult, $this->helper->renameKeys($array, $newKeys));
+    }
 }

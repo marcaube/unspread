@@ -39,4 +39,24 @@ class ArrayHelper
 
         return false;
     }
+
+    /**
+     * Renames the keys of an array
+     *
+     * @param array $array
+     * @param array $newKeys
+     *
+     * @return array
+     */
+    public function renameKeys($array, $newKeys)
+    {
+        $keyMapping = array_combine(array_keys($array), $newKeys);
+
+        foreach ($array as $key => $value) {
+            $array[$keyMapping[$key]] = $value;
+            unset($array[$key]);
+        }
+
+        return $array;
+    }
 }
